@@ -60,12 +60,12 @@ esac
 
 # 3. 配置网络
 if [ "$count" -eq 1 ]; then
-    # 单网口设备，DHCP模式
-    uci set network.lan.proto='dhcp'
-    uci delete network.lan.ipaddr
-    uci delete network.lan.netmask
-    uci delete network.lan.gateway
-    uci delete network.lan.dns
+    # 单网口设备
+    uci set network.lan.proto='static'
+    uci set network.lan.ipaddr='192.168.25.253'
+    uci set network.lan.netmask='255.255.255.0'
+    uci set network.lan.gateway='192.168.25.2'
+    uci set network.lan.dns='192.168.25.253'
     uci commit network
 elif [ "$count" -gt 1 ]; then
     # 多网口设备配置
