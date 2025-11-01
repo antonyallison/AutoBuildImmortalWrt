@@ -24,7 +24,7 @@ CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-passwall luci-i18n-passwall-zh-cn"
 # 分区扩容 by sirpdboy 
 #CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-partexp luci-i18n-partexp-zh-cn"
 # 主题
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-theme-kucat"
+#CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-theme-kucat"
 CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-theme-design"
 # 进阶设置 by sirpdboy 
 # 当luci-app-advancedplus插件开启时 需排除冲突项 luci-app-argon-config和luci-i18n-argon-config-zh-cn 减号代表排除
