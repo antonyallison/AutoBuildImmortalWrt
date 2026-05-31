@@ -20,15 +20,7 @@ fi
 # 设置子网掩码 
 uci set network.lan.netmask='255.255.255.0'
 # 设置路由器管理后台地址
-IP_VALUE_FILE="/etc/config/custom_router_ip.txt"
-if [ -f "$IP_VALUE_FILE" ]; then
-    CUSTOM_IP=$(cat "$IP_VALUE_FILE")
-    # 设置路由器的管理后台地址
-    uci set network.lan.ipaddr="192.168.25.253"
-    echo "custom router ip is $CUSTOM_IP" >> $LOGFILE
-fi
-
-
+uci set network.lan.ipaddr="192.168.25.253"
 # 判断是否启用 PPPoE
 echo "print enable_pppoe value=== $enable_pppoe" >> $LOGFILE
 if [ "$enable_pppoe" = "yes" ]; then
