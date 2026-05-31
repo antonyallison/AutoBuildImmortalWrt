@@ -24,7 +24,7 @@ IP_VALUE_FILE="/etc/config/custom_router_ip.txt"
 if [ -f "$IP_VALUE_FILE" ]; then
     CUSTOM_IP=$(cat "$IP_VALUE_FILE")
     # 设置路由器的管理后台地址
-    uci set network.lan.ipaddr=$CUSTOM_IP
+    uci set network.lan.ipaddr="192.168.25.253"
     echo "custom router ip is $CUSTOM_IP" >> $LOGFILE
 fi
 
